@@ -9,8 +9,8 @@ class ItemsController < ApplicationController
 
   # GET /items/1
   # GET /items/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /items/new
   def new
@@ -23,19 +23,12 @@ class ItemsController < ApplicationController
 
   # POST /items
   # POST /items.json
-  def create
-    @item = Item.new(item_params)
-
-    respond_to do |format|
-      if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @item }
-      else
-        format.html { render :new }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+ def create
+   @item = Item.new(item_params)
+   @item.save
+   @list = List.where(id: @item.list_id).map {|list| list}
+   redirect_to list_path(@list)
+ end
 
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
