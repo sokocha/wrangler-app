@@ -20,7 +20,32 @@ $('document').ready(function () {
     ev.preventDefault();
 
     var textBox = $('input#item_name').val();
+
+    $path = window.location.pathname
+    path_array = $path.split('/')
+    id_string = path_array[2]
+
+    var dataString = {"item" : {"name" : textBox, "list_id" : id_string}}
     
+
+
+
+    
+
+         $.ajax({
+             url: '/items',
+             type: "POST",
+             data: JSON.stringify(dataString),
+             contentType: "application/json",
+             dataType: "json",
+             success: function (json) { 
+               console.log(json);
+
+     },
+     error : function () {
+       alert("ajax error");}
+     });
+
   })
 
 
