@@ -1,14 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
+
+<% @user.lists.each do |list| %>
+  <ul><li><%= link_to list.title, list_path(list) %></li></ul>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

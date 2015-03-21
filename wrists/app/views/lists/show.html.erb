@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= @list.user.email %>
-</p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @list.title %>
+  <strong><%= @list.title %></strong>
 </p>
 
 
@@ -24,7 +20,11 @@
   <thead><strong>To Do</strong></thead>
   <tbody>
     <% @list.items.each do |item| %>
-    <tr><td> <%= item.name %></td></tr>
+    <tr>
+      <td> <%= item.name %></td>
+      <td><%= link_to 'Edit', edit_item_path(item)  %></td>
+      <td> <%= item.status %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
