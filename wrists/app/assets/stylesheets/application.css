@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ td.item_name {
+  color: green;
+ }
+
+td.item_name.complete {
+  color: red;
+  text-decoration: line-through
+}

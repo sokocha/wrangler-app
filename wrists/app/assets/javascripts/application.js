@@ -41,7 +41,7 @@ $('document').ready(function () {
           });
   });
 
-  $('td.item_name').on('click', function(e){
+  $('td').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('complete');
   })
