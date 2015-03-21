@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
+<%= link_to 'Create a new list', new_list_path  %>
 
 <% @user.lists.each do |list| %>
   <ul><li><%= link_to list.title, list_path(list) %></li></ul>

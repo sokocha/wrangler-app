@@ -25,12 +25,10 @@ $('document').ready(function () {
     path_array = $path.split('/')
     id_string = path_array[2]
 
-    var dataString = {"item" : {"name" : textBox, "list_id" : id_string}}
-    
-
-
+    var dataString = {"item" : {"name" : textBox, "list_id" : id_string, "status" : true}}
 
     
+
 
          $.ajax({
              url: '/items',
@@ -40,11 +38,14 @@ $('document').ready(function () {
              dataType: "json",
              success: function (json) { 
                console.log(json);
+               document.getElementById('entries').innerHTML += '<tr><td>'+textBox+'</td></tr>';
 
-     },
-     error : function () {
-       alert("ajax error");}
-     });
+          },
+          error : function () {
+            alert("ajax error");}
+          });
+
+         
 
   })
 
