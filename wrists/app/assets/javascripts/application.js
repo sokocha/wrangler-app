@@ -18,7 +18,7 @@
 $('document').ready(function () {
   $('form#new_item.new_item').on('submit', function (ev) {
     ev.preventDefault();
-
+    form = this
     var textBox = $('input#item_name').val();
 
     $path = window.location.pathname
@@ -27,9 +27,6 @@ $('document').ready(function () {
 
     var dataString = {"item" : {"name" : textBox, "list_id" : id_string, "status" : true}}
 
-    
-
-
          $.ajax({
              url: '/items',
              type: "POST",
@@ -37,17 +34,25 @@ $('document').ready(function () {
              contentType: "application/json",
              dataType: "json",
              success: function (json) { 
-               console.log(json);
-               document.getElementById('entries').innerHTML += '<tr><td>'+textBox+'</td></tr>';
-
+               document.getElementById('entries').innerHTML += '<tr><td>'+textBox+'</td><td></td></tr>';
           },
           error : function () {
             alert("ajax error");}
           });
+  });
 
-         
-
+  $('td.item_name').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('complete');
   })
+
+  
+
+
+
+
+ 
+  
 
 
 

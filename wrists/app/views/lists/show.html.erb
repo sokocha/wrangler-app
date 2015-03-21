@@ -21,13 +21,15 @@
   <tbody id = "entries">
     <% @list.items.each do |item| %>
     <tr>
-      <td> <%= item.name %></td>
-      <td><%= link_to 'Edit', edit_item_path(item)  %></td>
-      <td> <%= item.status %></td>
+      <td class = 'item_name'> <%= item.name %></td>
+      <!-- <td><%= link_to 'Edit', edit_item_path(item)  %></td> -->
+      <!-- <td> <%= item.status %></td> -->
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<button id = 'button'>Hit me</button>
 
 <br>
 <br>
