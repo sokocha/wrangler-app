@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$('document').ready(function () {
+  $('form#new_item.new_item').on('submit', function (ev) {
+    ev.preventDefault();
+
+    var textBox = $('input#item_name').val();
+    
+  })
+
+
+
+});
