@@ -19,6 +19,12 @@
 
 
 $('document').ready(function () {
+  
+  $('td').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('complete');
+  })
+
   $('form#new_item.new_item').on('submit', function (ev) {
     ev.preventDefault();
     form = this
@@ -37,18 +43,20 @@ $('document').ready(function () {
              contentType: "application/json",
              dataType: "json",
              success: function (json) { 
-               document.getElementById('entries').innerHTML += '<tr><td>'+textBox+'</td><td></td></tr>';
-               $('form#new_item.new_item')[0].reset()
+               document.getElementById('entries').innerHTML += "<tr><td class = 'item_name'>"+textBox+'</td></tr>';
+               $('form#new_item.new_item')[0].reset();
+               
+               $('td').on('click', function(e){
+                 e.preventDefault();
+                 $(this).toggleClass('complete');
+               });
           },
           error : function () {
             alert("ajax error");}
           });
   });
 
-  $('td').on('click', function(e){
-    e.preventDefault();
-    $(this).toggleClass('complete');
-  })
+  
 
   
 
