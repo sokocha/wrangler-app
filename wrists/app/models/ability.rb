@@ -44,7 +44,7 @@ class Ability
         end
 
 
-        cannot :create, User
+        # cannot :create, User
         cannot :update, User
         cannot :destroy, User
 
