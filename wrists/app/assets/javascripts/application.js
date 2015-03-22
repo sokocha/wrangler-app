@@ -38,6 +38,7 @@ $('document').ready(function () {
              dataType: "json",
              success: function (json) { 
                document.getElementById('entries').innerHTML += '<tr><td>'+textBox+'</td><td></td></tr>';
+               $('form#new_item.new_item')[0].reset()
           },
           error : function () {
             alert("ajax error");}
