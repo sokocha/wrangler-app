@@ -1,6 +1,8 @@
 class ListsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_list, only: [:show, :edit, :update, :destroy]
 
+  respond_to :html
   # GET /lists
   # GET /lists.json
   # def index
