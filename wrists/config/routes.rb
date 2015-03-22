@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: "lists#index"
+  root to: 'users#current_user_home'
   resources :items
 
   resources :lists
