@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 gem 'cancancan', '~> 1.10'
 gem 'jquery-cookie-rails'
 gem 'jquery-turbolinks'
