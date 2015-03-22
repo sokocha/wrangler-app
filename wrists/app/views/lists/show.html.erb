@@ -19,7 +19,7 @@
 <table class="table-minimal">
   <thead>
     <tr>
-      <th>To Do</th>
+      <th>To Do <%= link_to 'Edit', edit_list_path(@list) %> </th>
     </tr>
   </thead>
   <tbody id = "entries">
@@ -36,9 +36,8 @@
 
 
 
-<button id = 'button'>Hit me</button>
 
 <br>
 <br>
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+
+
