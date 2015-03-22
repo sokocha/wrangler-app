@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'jquery-turbolinks'
 gem "bourbon"
 gem "neat"
 gem 'refills'
