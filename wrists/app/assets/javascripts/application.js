@@ -11,9 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
 
 $('document').ready(function () {
   $('form#new_item.new_item').on('submit', function (ev) {
