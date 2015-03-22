@@ -24,6 +24,9 @@ $('document').ready(function () {
   $('td').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('complete');
+    if ($('td').hasClass('complete')){
+     $.cookie('status','complete')};
+     console.debug($.cookie("status"));
   })
 
   $('form#new_item.new_item').on('submit', function (ev) {
@@ -50,7 +53,12 @@ $('document').ready(function () {
                $('td').on('click', function(e){
                  e.preventDefault();
                  $(this).toggleClass('complete');
+                 
+                 if ($('td').hasClass('complete')){
+                  $.cookie('status','complete')};
+                  console.debug($.cookie("status"));
                });
+
           },
           error : function () {
             alert("ajax error");}
