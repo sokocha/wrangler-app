@@ -16,8 +16,12 @@
 </div>
 <% end %>
 
-<table>
-  <thead><strong>To Do</strong></thead>
+<table class="table-minimal">
+  <thead>
+    <tr>
+      <th>To Do</th>
+    </tr>
+  </thead>
   <tbody id = "entries">
     <% @list.items.each do |item| %>
     <tr>
@@ -28,6 +32,9 @@
     <% end %>
   </tbody>
 </table>
+
+
+
 
 <button id = 'button'>Hit me</button>
 
