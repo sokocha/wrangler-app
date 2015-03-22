@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :items, except: [:index, :show]
 
-  resources :lists, except: [:index]
+  resources :lists
 
   resources :users, only: [:show, :create]
 
