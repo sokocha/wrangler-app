@@ -36,8 +36,12 @@ $('document').ready(function () {
 
   $('td').on('click', function(e){
     e.preventDefault();
+    var specificTd = this
+    
     function setMyCookie() {
-        myCookieVal = $('td').hasClass('complete') ? 'isComplete' : 'notComplete';
+      console.log(specificTd)
+        myCookieVal = $(specificTd).hasClass('complete') ? 'isComplete' : 'notComplete';
+        console.log(myCookieVal)
         $.cookie('myCookieName', myCookieVal, { path: '/' });    
     }
     $(this).toggleClass('complete');
