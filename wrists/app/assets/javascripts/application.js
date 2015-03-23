@@ -41,8 +41,7 @@ $('document').ready(function () {
         $.cookie('myCookieName', myCookieVal, { path: '/' });    
     }
     $(this).toggleClass('complete');
-     $('td').toggleClass('active');
-         setMyCookie();
+    setMyCookie();
   })
 
   $('form#new_item.new_item').on('submit', function (ev) {
