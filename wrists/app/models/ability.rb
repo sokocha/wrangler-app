@@ -38,15 +38,10 @@ class Ability
         end
 
         # ***********************************************************
-
-        can :read, User do |u|
+        can :manage, User do |u|
             u.id == user.id
         end
-
-
-        # cannot :create, User
-        cannot :update, User
-        cannot :destroy, User
+        
 
         
       else
