@@ -14,11 +14,10 @@
  *= require_self
  */
 
- @import "bourbon";
+ @import "bourbon/bourbon";
  @import "base/base";  
- @import "neat";
+ @import "neat/neat";
  @import "scaffolds.scss";
- /*@import "variables.scss";*/
  @import "navbar.scss";
  @import "lists.scss";
  @import "tables.scss";
