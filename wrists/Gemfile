@@ -4,6 +4,8 @@ gem 'rails_12factor', group: :production
 gem 'cancancan', '~> 1.10'
 gem 'jquery-cookie-rails'
 gem 'jquery-turbolinks'
+gem 'sass'
+gem 'bitters'
 gem "bourbon"
 gem "neat"
 gem 'refills'
