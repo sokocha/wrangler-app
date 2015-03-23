@@ -21,12 +21,28 @@
 
 $('document').ready(function () {
   
+ 
+
+  if ($.cookie('myCookieName') == 'isComplete') {
+      $('td').addClass('complete');    
+  } else {
+      $('td').removeClass('complete');
+  }
+
+
+
+
+
+
   $('td').on('click', function(e){
     e.preventDefault();
+    function setMyCookie() {
+        myCookieVal = $('td').hasClass('complete') ? 'isComplete' : 'notComplete';
+        $.cookie('myCookieName', myCookieVal, { path: '/' });    
+    }
     $(this).toggleClass('complete');
-    if ($('td').hasClass('complete')){
-     $.cookie('status','complete')};
-     console.debug($.cookie("status"));
+     $('td').toggleClass('active');
+         setMyCookie();
   })
 
   $('form#new_item.new_item').on('submit', function (ev) {
@@ -54,8 +70,6 @@ $('document').ready(function () {
                  e.preventDefault();
                  $(this).toggleClass('complete');
                  
-                 if ($('td').hasClass('complete')){
-                  $.cookie('status','complete')};
                   console.debug($.cookie("status"));
                });
 
@@ -67,7 +81,9 @@ $('document').ready(function () {
 
   
 
-  
+
+
+
 
 
 
