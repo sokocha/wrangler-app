@@ -42,7 +42,8 @@ $('document').ready(function () {
       console.log(specificTd)
         myCookieVal = $(specificTd).hasClass('complete') ? 'isComplete' : 'notComplete';
         console.log(myCookieVal)
-        $.cookie('myCookieName', myCookieVal, { path: '/' });    
+        $.removeCookie('myCookieName');
+        $.cookie('myCookieName', myCookieVal);    
     }
     $(this).toggleClass('complete');
     setMyCookie();
