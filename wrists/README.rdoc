@@ -51,11 +51,11 @@ rails s
 
 I encountered a few challenges while developing the Wrangler-App, especially with regards to saving the state of the items in the todo list. I reasoned that instead of deleting items from a list entirely, a user should be able to toggle the class of the list item by adding or removing "complete" from the <td>. This gives the user the satisfaction of looking back on all the completed tasks, and gives the user a feeling of productivity.
 
-I added some CSS styling for both classes: "complete" (not) "complete". This worked well, until ofcourse the page is refereshed and all the classes return to the default of (not) "complete". 
+I added some CSS styling for both classes: "complete" (not) "complete". This works well, until ofcourse the page is refereshed and all the classes return to the default of (not) "complete". 
 
 I knew immediately that I would need to somehow save the state of a given td after a click event. I googled various ways to do this and came up with two approaches: JQuery.cookie and HTML localStorage.
 
-I chose to implement Jqeury.cookie after having a play with both technologies over the course of a few days. . I knew that on a page load, it would need to immediately check the existing cookies and apply them to the <td>s. However, I was unable to resolve the issue of saving a cookie for each <td>. Currently, if a user checks off all items on a list and refreshes it saves that state, but if a user only checks off a few items, it returns to the default state. It's "all or nothing". I also found the Jquery.cookie documentation to be insufficient.
+I chose to implement Jqeury.cookie after having a play with both technologies over the course of a few days. I knew that on a page load, it would need to immediately check the existing cookies and apply them to the <td>s. However, I was unable to resolve the issue of saving a cookie for each <td>. Currently, if a user checks off all items on a list and refreshes it saves that state, but if a user only checks off a few items, it returns to the default state. It's "all or nothing". I also found the Jquery.cookie documentation to be insufficient.
 
 
 I chose Rails initially because due to my familiarity with the framework, and I knew that at a high level, this would be a CRUD-reliant application with a need for RESTful internal APIs. 
