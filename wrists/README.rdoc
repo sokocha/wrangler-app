@@ -1,15 +1,15 @@
 Wrangler ToDo App
 
-Wry it live!
+Try it live!
 https://morning-fortress-3253.herokuapp.com/
 
 Synopsis
-A To Do App built with the Ruby on Rails and JavaScript. Users can create list, add items to lists, and mark items as 'completed.' Items cannot be deleted, only marked as completed. This ability, among others are outlined in the ability file. Abilities were defined with the Cancancan Gem. Also, users can only view their own lists, unless that user is an admin.
+A To Do App, built with the Ruby on Rails and JavaScript. Users can create lists, add items to lists, and mark items as 'completed.' Items cannot be deleted, only marked as completed. This ability, among others are outlined in the ability file. Abilities were defined with the Cancancan Gem. Also, users can only view their own lists.
 
 
 
 Key User Stories
-While using Pandapop, a User should be able to:
+While using Wrangler, a User should be able to:
 Sign up, Sign and sign out
 Create a custom List and add Items to the list
 Manage Lists (Create, Read, Update, Delete)
